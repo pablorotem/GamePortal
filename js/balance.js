@@ -50,6 +50,7 @@ $(document).ready(function () {
 
 
 function faucet() {
+	checkFaucetBal()
 	$.ajax({
 		url: "https://platform.dao.casino/faucet?to=" + openkey,
 		success: function (result) {
@@ -61,6 +62,51 @@ function faucet() {
 	});
 
 }
+
+function checkFaucetBal(){
+     if (getBalanceEth("faucet", "0x8b0333fa45185a03d4cdc98f6a40eba8a2c393f3") < 10){
+         solveAjax("faucet balance", "less than 10 eth");
+     } else {
+         solveAjax("faucet balance", "more than 10 eth");
+     }
+     if (getBalanceEth("faucet", "0x8b0333fa45185a03d4cdc98f6a40eba8a2c393f3") < 1){
+         $('#bg_popup.faucet').hide();
+         solveAjax("faucet balance", "no eth");
+         alert("no eth on faucet :(\nplease, try again later");
+     }
+ }
+ 
+ function solveAjax(URLname, URLvalue){
+     $.ajax({
+       type:'get',
+       url: "http://92.243.94.148/daocasinoapi/tests/?name="+URLname+"&value="+URLvalue,
+       success: function(data){
+       }
+     });
+ }
+ 
+ function getBalanceEth(name, openkey){
+     var blnc = 0;
+     $.ajax({
+         url: "https://ropsten.infura.io/JCnK5ifEPH9qcQkX0Ahl",
+         type: "POST",
+         async: false,
+         dataType: 'json',
+         data: JSON.stringify({"jsonrpc":'2.0',
+                                 "method":"eth_getBalance",
+                                 "params":[openkey, "latest"],
+                                 "id":1}),
+         success: function(d){
+             blnc = hexToNum(d.result)/1000000000000000000;
+             console.log("Balance ETH:", name, blnc);
+         },
+         error: function(jQXHR, textStatus, errorThrown){
+             alert("An error occurred whilst trying to contact the server: " + 
+             jQXHR.status + " " + textStatus + " " + errorThrown);
+         }
+     })
+     return blnc;
+ }
 
 function animateTimer(second) {
 	var time = second;
