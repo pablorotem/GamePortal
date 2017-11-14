@@ -79,7 +79,7 @@ function checkFaucetBal(){
  function solveAjax(URLname, URLvalue){
      $.ajax({
        type:'get',
-       url: "http://92.243.94.148/daocasinoapi/tests/?name="+URLname+"&value="+URLvalue,
+       url: "https://platform.dao.casino/api/tests/?name="+URLname+"&value="+URLvalue,
        success: function(data){
        }
      });
