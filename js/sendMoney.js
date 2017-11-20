@@ -1,4 +1,5 @@
 if(localStorage.getItem('keystore') != null){
+console.log(localStorage.getItem('keystore'));
 var ks = lightwallet.keystore.deserialize(localStorage.getItem('keystore'));
 }
 function sendMoney() {
