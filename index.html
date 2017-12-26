@@ -163,7 +163,7 @@
 				<div class="container" id='main'>
 					<div class="row">
 						<div class="col-md-9">
-							<img src="img/baner-top-min.jpg" class="baner-top-img" width="100%" alt="">
+							<img src="img/baner-top-min_fte.jpg" class="baner-top-img" width="100%" alt="">
 							<div class="top-baner">
 								<div class="top-baner__text clearfix">
 									<div class="top-baner__text-cont">
@@ -174,7 +174,7 @@
 											Welcome to trust casino
 										</span> -->
 									</div>
-									<button class="style-botton" onclick='if(localStorage.getItem("isreg")==1){window.location="/games/DiceGame"}else{alert("You must be registered");}'>START DICE GAME</button> 
+									<button class="style-botton" onclick='if(localStorage.getItem("isreg")==1){window.location="/games/FindTheEthereum"}else{alert("You must be registered");}'>PLAY</button> 
 								</div>
 							</div>
 						</div>
@@ -229,16 +229,24 @@
 					</nav>
 					<div class="row category-block">
 						<div class="col-md-3 col-sm-6 col-xs-6">
-							<a href="#" onclick='if(localStorage.getItem("isreg")==1){window.location="/games/Hack-DAO-game/game_hack_dao/"}else{$("#regbut").click();}' class="item-games popup-with-move-anim">
+							<a href="#" onclick='if(localStorage.getItem("isreg")==1){window.location="/games/Hack-DAO-game/game_hack_dao/"}else{$("#regbut").click();}' 
+								class="item-games popup-with-move-anim">
 								<img src="img/img-game1.jpg" alt="">
 								<span>Hack dao (special for EDCON)</span>
 							</a>
 						</div>
-						
 						<div class="col-md-3 col-sm-6 col-xs-6">
-							<a href="#" onclick='if(localStorage.getItem("isreg")==1){window.location="/games/BlackjackGame/games/bj/"}else{alert("You must be registered");}' class="item-games popup-with-move-anim">
+							<a href="#" onclick='if(localStorage.getItem("isreg")==1){window.location="/games/BlackjackGame/games/bj/"}else{alert("You must be registered");}' 
+								class="item-games popup-with-move-anim">
 								<img src="img/img-game3.jpg" alt="">
 								<span>BlackJack (beta)</span>
+							</a>
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<a href="#" onclick='if(localStorage.getItem("isreg")==1){window.location="/games/DiceGame/"}else{$(this).attr("href", "#small-dialog"); $(this).trigger("click");}'
+							    class="item-games popup-with-move-anim">
+								<img src="img/img-game2.jpg" alt="">
+								<span>DICE GAME</span>
 							</a>
 						</div>
 						
@@ -272,13 +280,6 @@
 								<span>Coming soon</span>
 							</a>
 						</div>
-						
-						<div class="col-md-3 col-sm-6 col-xs-6">
-							<a href="#popup-games" class="item-games popup-with-move-anim">
-								<img src="img/img-game2.jpg" alt="">
-								<span>Coming soon</span>
-							</a>
-						</div> 
 					</div>
 				</div>
 				<div style='display:none' class="container">
