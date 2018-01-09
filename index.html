@@ -174,7 +174,7 @@
 											Welcome to trust casino
 										</span> -->
 									</div>
-									<button class="style-botton" onclick='window.location="/games/FindTheEthereum"'>PLAY</button> 
+									<button class="style-botton" onclick='if(localStorage.getItem("isreg")==1){window.location="/games/FindTheEthereum"}else{alert("You must be registered");}'>PLAY</button>
 								</div>
 							</div>
 						</div>
