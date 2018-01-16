@@ -601,6 +601,14 @@ header {
 	border-radius: 4px;
 }
 
+.warrning-info {
+	font-family: "ProximaNova-Bold", Arial;
+	font-size: 23px;
+	text-align: center;
+	padding-top: 10px;
+	color: #9b1717;
+}
+
 .jackpot {
 	min-height: 234px;
 	background: #251b27 url(../img/bg-777.png);

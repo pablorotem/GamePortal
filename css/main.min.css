@@ -189,6 +189,14 @@ div#small-dialog,
 	display: inline-block;
 }
 
+.warrning-info {
+	font-family: "ProximaNova-Bold", Arial;
+	font-size: 23px;
+	text-align: center;
+	padding: 10px;
+	color: #9b1717;
+}
+
 .disclaimer-btn {
 	font: 17px/normal "ProximaNova-Bold";
 	text-transform: uppercase;
