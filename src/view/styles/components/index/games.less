@@ -1,0 +1,91 @@
+@mright: 25px;
+
+.games {
+    margin-top: 48px;
+
+    &-list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @media @netbook {
+            justify-content: center;
+        }
+    }
+
+    &-item {
+        margin: 0 5px 10px 0;
+        display: block;
+        border-radius: 5px;
+        overflow: hidden;
+
+        &:nth-child(4n) {
+            margin-right: 0;
+        }
+
+        @media @laptop {
+            width: 24%;
+        }
+        
+        @media @netbook {
+            margin-right: @mright;
+            width: 45%;
+            
+            &:first-child {
+                margin-right: @mright;
+            }
+
+            &:nth-child(4n) {
+                margin-right: @mright;
+            }
+
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+        }
+
+        @media @tablet {
+            margin-left: 0;
+            margin-right: 0;
+            width: 100%;
+            &:first-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &-link {
+        position: relative;
+        display: block;
+        &:before {
+            content: '';
+            position: absolute;
+            display: block;;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            background-color: #000;
+            opacity: .2;
+        }
+        &:hover .games-img {
+            transform: scale(1.1)
+        }
+    }
+
+    &-text {
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        z-index: 10;
+        text-transform: uppercase;
+        font-family: @prox_b;
+        font-size: 23px;
+        -webkit-text-stroke: 1px black;
+        color: #fff
+    }
+
+    &-img {
+        position: relative;
+        width: 100%;
+        transition: all .6s;
+    }
+}

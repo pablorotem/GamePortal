@@ -1,0 +1,239 @@
+.account-window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    display: none;
+    width: 100%;
+    min-height: 460px;
+    height: 100%;
+    opacity: 0;
+    transition: all .5s;
+    &.popup-active {
+        opacity: 1
+    }
+}
+
+.account-overlay {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, .7);
+}
+
+.account-popuppage {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: @main_bg;
+    border: 2px solid @text_g;
+}
+
+.account-close {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    &:hover .account-closelink {
+        transition: 1s;
+        background-color: #e99b4d;
+        &:before {
+            transition: 1s;
+            background-color: #e99b4d;
+        }
+    }
+}
+
+.account-closelink {
+    display: block;
+    width: 30px;
+    height: 5px;
+    background-color: @text_g;
+    transform: rotate(45deg);
+    transition: all 1s;
+    &:before {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 5px;
+        background-color: @text_g;
+        transform: rotate(-90deg);
+        transition: all 1s;
+    }
+}
+
+.account-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.account-capt {
+    font-family: @prox_r;
+    font-size: 25px;
+}
+
+.account-address {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-family: @prox_b;
+    font-size: 32px;
+    text-align: center;
+    color: #fff;
+    background-color: @main_bg;
+    border: none;
+}
+
+.account-controls {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.export-private {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    width: 100%;
+}
+
+.inputstyle() {
+    height: 45px;
+    width: 100%;
+    text-align: center;
+    font-family: @prox_b;
+    font-size: 18px;
+    color: @text_g;
+    background-color: @main_bg;
+    border: none;
+    border-bottom: 2px solid @text_g;
+}
+
+.account-privatekey {
+    .inputstyle()
+}
+
+.account-export {
+    margin-top: 20px;
+    padding: 10px 40px;
+    font-family: @prox_b;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: @main_bg;
+    border: 2px solid @text_g;
+    transition: all 1s;
+    &:hover {
+        background-color: @text_g;
+    }
+}
+
+.export-msg {
+    margin: 10px 0;
+    display: none;
+    font-family: @prox_b;
+    text-align: center;
+    &.copy {
+        display: block;
+    }
+}
+
+.send {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.send-address {
+    .inputstyle();
+    width: 40%;
+}
+
+.send-amount {
+    .inputstyle();
+    width: 40%;
+}
+
+.send-currency {
+    margin-top: 20px;
+    font-family: @prox_b;
+    color: @text_g;
+    text-transform: uppercase;
+}
+
+.send-checkcur {
+    display: none;
+    &:checked ~ .send-shadow:after {
+        background-color: @text_g;
+    }
+}
+
+.send-shadow {
+    cursor: pointer;
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 15px;
+        height: 15px;
+        border: 1px solid @text_g;
+        border-radius: 50%;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: 4.5px;
+        right: 4.5px;
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+    }
+}
+
+.left {
+    padding-left: 25px;
+    &:before {
+        right: inherit;
+        left: 0;
+    }
+
+    &:after {
+        right: inherit;
+        left: 4.5px;
+    }
+}
+
+.right {
+    padding-right: 25px;
+}
+
+.send-submit {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-family: @prox_b;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: @text_g;
+    transition: all 1s;
+    &:hover {
+        background-color: #000;
+    }
+}

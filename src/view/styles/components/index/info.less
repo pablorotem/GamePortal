@@ -1,0 +1,90 @@
+.info {
+    height: 200px;
+    display: flex;
+    @media @netbook {
+        height: inherit;
+        flex-direction: column; 
+    }
+}
+
+.newgame {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px;
+    @media @netbook {
+        width: 100%;
+        height: 300px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    &-play {
+        position: absolute;
+        right: 60px;
+        padding: 10px 38px;
+        display: inline-block;
+        font-family: @prox_b;
+        font-size: 27px;
+        color: #d08c49;
+        text-transform: uppercase;
+        border: 1px solid #d08c49;
+        background-color: #272647;
+        transition: all .4s;
+        &:hover {
+            border-color: #e99b4d;
+            color: #e99b4d
+        }
+        @media @netbook {
+            top: 120px;
+        }
+    }
+}
+
+.statistic {
+    padding: 34px 10px 10px 24px;
+    margin-left: 15px;
+    width: 25%;
+    font-family: @prox_r;
+    text-transform: uppercase;
+    color: #fff;
+    background: #251b27 url('/static/img/bg-777.png') no-repeat;
+    background-position: calc(100% - 15px) calc(100% - 15px);
+    border-radius: 5px;
+    transition: all .5s;
+    @media @netbook {
+        margin-left: 0;
+        width: 100%;
+        height: 300px;
+        background-position: calc(100% - 5px) calc(100% - 15px);
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    &-capt {
+        margin-bottom: 16px;
+        display: block;
+        font-family: @prox_b;
+        font-size: 30px;
+        color: @text_g;
+    }
+
+    &-name {
+        margin-bottom: 4px;
+        display: block;
+        font-size: 11px;
+        color: @text_g;
+    }
+
+    &-value {
+        font-size: 17px;
+    }
+
+    &-bankroll {
+        margin-bottom: 13px;
+    }
+}

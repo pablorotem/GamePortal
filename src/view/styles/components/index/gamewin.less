@@ -1,0 +1,33 @@
+.game-window {
+    position: relative;
+    width: 100%;
+    height: 0;
+    border: 2px solid transparent;
+    outline: none;
+    transition: all 1s;
+    &.winload {
+        margin-top: 50px;
+        height: 653px;
+        border-color: @text_g;
+    }
+}
+
+.game-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.preload {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: @main_bg;
+    &.preloadout {
+        opacity: 0;
+        transition: 1s;
+    }
+}

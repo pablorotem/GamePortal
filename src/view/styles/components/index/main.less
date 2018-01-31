@@ -1,0 +1,43 @@
+.main {
+    padding: 20px;
+    background-color: rgba(45, 32, 49, .9);
+}
+
+.mainmenu {
+    @media @netbook {
+        display: none;   
+    }
+}
+
+.mainmenu-list {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.mainmenu-item {
+    padding: 10px 0 24px;
+}
+
+.mainmenu-link {
+    position: relative;
+    padding: 10px 28px;
+    font-family: @prox_b;
+    font-size: 23px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #fff;
+    border-right: 1px solid #1F1920;
+    transition: all .3s;
+    &:hover {
+        color: #d08c49;
+    }
+    &:first-child {
+        padding-left: 0;
+    }
+    &:last-child {
+        border-right: none;
+    }
+    @media @laptop {
+        font-size: 18px;
+    }
+}
