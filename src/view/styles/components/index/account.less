@@ -5,7 +5,8 @@
     z-index: 20;
     display: none;
     width: 100%;
-    min-height: 460px;
+    min-height: 520px;
+    min-width: 360px;
     height: 100%;
     opacity: 0;
     transition: all .5s;
@@ -26,10 +27,12 @@
 
 .account-popuppage {
     position: relative;
-    padding: 20px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 900px;
+    max-height: 550px;
     width: 100%;
     height: 100%;
     color: #fff;
@@ -46,10 +49,10 @@
     height: 30px;
     &:hover .account-closelink {
         transition: 1s;
-        background-color: #e99b4d;
+        background-color: #fcb46d;
         &:before {
             transition: 1s;
-            background-color: #e99b4d;
+            background-color: #fcb46d;
         }
     }
 }
@@ -76,6 +79,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 150px;
 }
 
 .account-capt {
@@ -91,9 +95,19 @@
     font-family: @prox_b;
     font-size: 32px;
     text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    white-space: nowrap;
     color: #fff;
     background-color: @main_bg;
     border: none;
+    &:hover {
+        text-decoration: underline;
+    }
+    @media screen and (max-width: 933px) {
+        display:inline-block;
+        justify-content: inherit;
+    }
 }
 
 .account-controls {
@@ -176,7 +190,7 @@
 
 .send-checkcur {
     display: none;
-    &:checked ~ .send-shadow:after {
+    &:checked ~ span.send-shadow:after {
         background-color: @text_g;
     }
 }
@@ -190,16 +204,16 @@
         top: 0;
         right: 0;
         display: block;
-        width: 15px;
-        height: 15px;
+        width: 16px;
+        height: 16px;
         border: 1px solid @text_g;
         border-radius: 50%;
     }
     &:after {
         content: '';
         position: absolute;
-        top: 4.5px;
-        right: 4.5px;
+        top: 5px;
+        right: 5px;
         display: block;
         width: 8px;
         height: 8px;
@@ -216,7 +230,7 @@
 
     &:after {
         right: inherit;
-        left: 4.5px;
+        left: 5px;
     }
 }
 

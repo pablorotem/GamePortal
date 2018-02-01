@@ -29,7 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
     account_page.style.display = 'block'
     logout_but.style.display   = 'block'
     Lib.balance(account_page)
-    account_address.value = Lib.getOpenkey().openkey
+    account_address.setAttribute('href', `https://ropsten.etherscan.io/address/${Lib.getOpenkey().openkey}`)
+    account_address.textContent = Lib.getOpenkey().openkey
   }
 
   const burgerinit  = burger()

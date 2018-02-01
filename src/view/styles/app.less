@@ -30,6 +30,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	height: 100%;
 	font-family: @prox_r;
 	background: #fff url('/static/img/main_bg-min.jpg') no-repeat;
 	background-size: cover;
@@ -38,7 +39,10 @@ body {
 
 .wrapper {
 	max-width: 1200px;
+	display: flex;
+	flex-direction: column;
 	width: 100%;
+	height: 100%;
 	@media @laptop {
 		padding: 0 20px;
 	}
@@ -59,3 +63,4 @@ body {
 @import './components/index/popup';
 @import './components/index/preloader';
 @import './components/index/account';
+@import './components/index/footer';

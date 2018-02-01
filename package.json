@@ -1,15 +1,20 @@
 {
 	"name": "dao-platform",
 	"description": "DAO.Casino platform",
-	"version": "0.0.1",
-	"author": "name <email@example.com>",
+	"version": "0.1.1",
+	"author": "fanyshu <ilyashvy@gmail.com>",
 	"private": true,
 	"homepage": "./",
+	"license": "GPL",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:DaoCasino/GamePortal.git"
+	},
 	"meta": {
 		"_": "It used for generate manifest.json in ./scripts/favicons.js",
 		"start_url": "/",
-		"appName": "Dao Game portal",
-		"appDescription": "App description",
+		"appName": "DAO.Casino game platform",
+		"appDescription": "platform for DAO.Casino games",
 		"background": "#1c2026",
 		"theme_color": "#1c2026",
 		"display": "standalone",
@@ -89,7 +94,8 @@
 		"phantomjs-prebuilt": "^2.1.14",
 		"pug": "^2.0.0-rc.4",
 		"riot": "^3.6.1",
-		"riot-route": "^3.1.1"
+		"riot-route": "^3.1.1",
+		"shelljs": "^0.8.1"
 	},
 	"devDependencies": {
 		"autoprefixer": "7.1.1",

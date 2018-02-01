@@ -4,25 +4,27 @@ import popup   from './popup'
 export default class GameWindow {
   constructor () {
     this.game_link  = document.querySelectorAll('.games-item')
-    this.newgame    = document.querySelector('.newgame-play')
     this.game       = false
+    
+    this.window_game = wingame()
+    
+    const newgame   = document.querySelector('.newgame-play')
 
-    this.newgame.addEventListener('click', (e) => {
+    newgame.addEventListener('click', (e) => {
       e.preventDefault()
-      wingame().init()
-      const href_link   = this.newgame.getAttribute('href')
-      const target_link = this.newgame.getAttribute('target')
+      this.window_game.init()
+      const href_link   = newgame.getAttribute('href')
+      const target_link = newgame.getAttribute('target')
       const link        = document.createElement('a')
-
+      console.log(href_link)
+      console.log(target_link)
       link.setAttribute('href', href_link)
       link.setAttribute('target', target_link)
 
       const event = document.createEvent('MouseEvents')
       event.initMouseEvent('click')
+      this.game = link
       this.timerScroll(false)
-      setTimeout(() => {
-        link.dispatchEvent(event)
-      }, 1000)
     })
 
     for (let i = 0; i < this.game_link.length; i++) {
@@ -40,7 +42,7 @@ export default class GameWindow {
           return
         }
 
-        wingame().init()
+        this.window_game.init()
 
         this.game = this.game_link[i].children[0]
         this.timerScroll(true)
@@ -56,7 +58,6 @@ export default class GameWindow {
         if (window_game.getBoundingClientRect().top > 0 && flag === true) {
           clearInterval(timeout)
         }
-        console.log(window_game.getBoundingClientRect().bottom)
         if (window_game.getBoundingClientRect().top - 50 <= 0 && flag === false) {
           clearInterval(timeout)
         }

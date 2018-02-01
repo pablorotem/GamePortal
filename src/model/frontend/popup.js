@@ -4,6 +4,7 @@ export default function popup () {
   const popup_container = document.querySelector('.popup')
   const popup_text      = document.querySelector('.popup-text')
   const accountPopup    = document.querySelector('.account-window')
+  const acc_overlay     = document.querySelector('.account-overlay')
   const closepopup_but  = document.querySelector('.popup-but')
   const popupAccount    = document.querySelector('.popup-account')
   const signBut         = document.querySelector('.account-signin')
@@ -91,6 +92,32 @@ export default function popup () {
           text:false,
           account:true
         })
+      })
+
+      popup_container.addEventListener('click', e => {
+        e.preventDefault()
+        const target = e.target || e.currentTarget
+
+        if (target.classList.contains('popup-table') || target.classList.contains('popup-text')) return
+        
+        popupActive({
+          flag:false,
+          text:false,
+          account:false
+        })
+      })
+
+      acc_overlay.addEventListener('click', e => {
+        const target = e.target || e.currentTarget
+        if (target.classList.contains('account-overlay')) {
+          popupActive({
+            flag:false,
+            text:false,
+            account:true
+          })
+        }
+
+
       })
 
       closeAccount.addEventListener('click', e => {
