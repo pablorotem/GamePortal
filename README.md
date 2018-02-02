@@ -13,4 +13,4 @@ Click FORK at bottom of this page <img src='http://dl4.joxi.net/drive/2017/03/28
 <img src='http://dl3.joxi.net/drive/2017/06/14/0004/2038/272374/74/4f4409da04.jpg'>
 Then Click save. <br>
 2.3 Done. Now you can see your whitelabel casino at https://{yourgithublogin}.github.io and recive 25% of all revenues from gamers you invite<br>
-2.4 Now you can add custom domain. https://help.github.com/articles/quick-start-setting-up-a-custom-domain/
+2.4 Now your can add custom domain. https://help.github.com/articles/quick-start-setting-up-a-custom-domain/
