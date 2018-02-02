@@ -1,3 +1,6 @@
+/*
+  globals localStorage 
+*/
 export default function logout () {
   const logout_but   = document.querySelector('.account-logout')
   const account_page = document.querySelector('.account-page')

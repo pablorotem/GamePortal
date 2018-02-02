@@ -1,3 +1,7 @@
+/*
+  globals localStorage 
+*/
+
 import DCLib from 'dclib'
 
 export default new class Lib {

@@ -1,7 +1,7 @@
 {
-  "version": "0.1.1",
-  "name": "RiotJS App",
-  "description": "App description",
+  "version": "2.0.1",
+  "name": "DAO.Casino game platform",
+  "description": "platform for DAO.Casino games",
   "icons": {
     "60": "/static/meta/firefox_app_60x60.png",
     "128": "/static/meta/firefox_app_128x128.png",

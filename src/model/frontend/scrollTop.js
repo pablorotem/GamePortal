@@ -5,9 +5,9 @@ export default class GameWindow {
   constructor () {
     this.game_link  = document.querySelectorAll('.games-item')
     this.game       = false
-    
+
     this.window_game = wingame()
-    
+
     const newgame   = document.querySelector('.newgame-play')
 
     newgame.addEventListener('click', (e) => {

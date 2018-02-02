@@ -23,9 +23,9 @@ export default function Account () {
           document.execCommand('copy')
           window.getSelection().removeAllRanges()
           msg_div.classList.add('copy')
-          setTimeout(()=>{
+          setTimeout(() => {
             msg_div.classList.remove('copy')
-          }, 3000)  
+          }, 3000)
         } catch (e) {
           console.log(e)
         }
@@ -43,7 +43,7 @@ export default function Account () {
         const to     = document.querySelector('.send-address').value
         const amount = document.querySelector('.send-amount').value
         const cur    = document.querySelectorAll('.send-checkcur')
-        
+
         let cur_value
 
         for (let i = 0; i < cur.length; i++) {

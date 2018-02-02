@@ -1,7 +1,7 @@
 {
-  "name": "RiotJS App",
-  "short_name": "RiotJS App",
-  "description": "App description",
+  "name": "DAO.Casino game platform",
+  "short_name": "DAO.Casino game platform",
+  "description": "platform for DAO.Casino games",
   "dir": "auto",
   "lang": "en-US",
   "display": "standalone",

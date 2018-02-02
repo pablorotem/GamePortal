@@ -99,7 +99,7 @@ export default function popup () {
         const target = e.target || e.currentTarget
 
         if (target.classList.contains('popup-table') || target.classList.contains('popup-text')) return
-        
+
         popupActive({
           flag:false,
           text:false,
@@ -116,8 +116,6 @@ export default function popup () {
             account:true
           })
         }
-
-
       })
 
       closeAccount.addEventListener('click', e => {

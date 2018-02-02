@@ -2,7 +2,7 @@ export default function wingame () {
   const game_win  = document.querySelector('.game-window')
   const preload   = document.querySelector('.preload')
   const gameFrame = document.querySelector('.game-frame')
-  
+
   function resize () {
     const max_w = 1920
     const max_h = 1080
@@ -14,13 +14,13 @@ export default function wingame () {
     game_win.style.height = height + 'px'
   }
 
-  function active () {    
+  function active () {
     game_win.classList.add('winload')
-  
+
     if (preload.classList.contains('preloadout')) {
       preload.classList.remove('preloadout')
     }
-  
+
     setTimeout(() => {
       preload.style.display = 'flex'
     }, 500)
@@ -32,7 +32,7 @@ export default function wingame () {
       active()
       gameFrame.addEventListener('load', () => {
         preload.classList.add('preloadout')
-    
+
         setTimeout(function () {
           preload.style.display = 'none'
         }, 1200)

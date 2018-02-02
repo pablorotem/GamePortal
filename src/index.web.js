@@ -1,10 +1,14 @@
+/*
+  globals localStorage 
+*/
+
 // riot route base url set in ./src/view/app.view.js line 47
 import View       from './view/app.view.js'
 import burger     from './model/frontend/burger'
-import wingame    from './model/frontend/wingame'
+// import wingame    from './model/frontend/wingame'
 import GameWindow from './model/frontend/scrollTop'
 import popup      from './model/frontend/popup'
-import preload    from './model/frontend/preloader'
+// import preload    from './model/frontend/preloader'
 import Lib        from './model/frontend/lib'
 import logout     from './model/frontend/logout'
 import netSwitch  from './model/frontend/networkSwitch'
@@ -17,12 +21,12 @@ window.App = App
 document.addEventListener('DOMContentLoaded', () => {
   App.view = new View()
   App.view.start()
- // App.loader = preload()
+  App.wingame = new GameWindow()
+  // App.loader = preload()
   const account_address = document.querySelector('.account-address')
-
-  const sign_but     = document.querySelector('.account-signin')
-  const account_page = sign_but.nextElementSibling
-  const logout_but   = sign_but.nextElementSibling.nextElementSibling
+  const sign_but        = document.querySelector('.account-signin')
+  const account_page    = sign_but.nextElementSibling
+  const logout_but      = sign_but.nextElementSibling.nextElementSibling
 
   if (localStorage.web3wallet) {
     sign_but.style.display     = 'none'
@@ -47,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
   account.init()
   inp.init()
 
-  const wingame = new GameWindow()
+  // wingame = new GameWindow()
 })
 
 // Enable SW in production
