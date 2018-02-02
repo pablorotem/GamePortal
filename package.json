@@ -1,7 +1,7 @@
 {
 	"name": "dao-platform",
 	"description": "DAO.Casino platform",
-	"version": "0.1.1",
+	"version": "2.0.1",
 	"author": "fanyshu <ilyashvy@gmail.com>",
 	"private": true,
 	"homepage": "./",
