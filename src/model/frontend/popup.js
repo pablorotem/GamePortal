@@ -79,7 +79,8 @@ export default function popup () {
           logout_but.style.display  = 'block'
 
           setTimeout(() => {
-            account_address.value = Lib.getOpenkey().openkey
+            account_address.textContent = Lib.getOpenkey().openkey
+            account_address.setAttribute('href', `https://ropsten.etherscan.io/address/${Lib.getOpenkey().openkey}`)
             Lib.balance(accountPage)
           }, 2000)
         }, 1000)

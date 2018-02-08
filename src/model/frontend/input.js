@@ -14,7 +14,7 @@ export default function inputNum () {
   return {
     init () {
       inp_am.addEventListener('keypress', dont_string)
-      inp_am.addEventListener('change', inp_am.length)
+      // inp_am.addEventListener('change', inp_am.length)
     }
   }
 }

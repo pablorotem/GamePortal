@@ -7,6 +7,10 @@ import DCLib from 'dclib'
 export default new class Lib {
   constructor () {
     this.DCLib = DCLib
+    this.DCLib.on('ready', () => {
+      document.querySelector('.account-signin').style.visibility = 'visible'
+      document.querySelector('.account-signin').textContent = 'sign in'
+    })
     if (localStorage.web3wallet) {
       this.DCLib.Account.initAccount()
     }

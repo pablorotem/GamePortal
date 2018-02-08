@@ -5,12 +5,18 @@ export default function Account () {
   const export_inp  = document.querySelector('.account-privatekey')
   const send_amount = document.querySelector('.send-submit')
   const msg_div     = document.querySelector('.export-msg')
-  const address     = document.querySelector('.send-address')
-  const amount      = document.querySelector('.send-amount')
+  // const address     = document.querySelector('.send-address')
+  // const amount      = document.querySelector('.send-amount')
+  // const acc_popup   = document.querySelector('.account-popuppag')
 
-  function reset (elem) {
-    elem.value = ''
-  }
+  // function reset (elem, flag) {
+  //   const val = elem.value
+  //   if (flag) {
+  //     elem.value = ''
+  //   } else {
+  //     elem.value = val
+  //   }
+  // }
 
   return {
     init () {
@@ -31,12 +37,20 @@ export default function Account () {
         }
       })
 
-      address.addEventListener('click', () => {
-        reset(address)
-      })
-      amount.addEventListener('click', () => {
-        reset(amount)
-      })
+      // address.addEventListener('click', () => {
+      //   reset(address, true)
+      // })
+      // amount.addEventListener('click', () => {
+      //   reset(amount, true)
+      // })
+
+      // acc_popup.addEventListener('click', e => {
+      //   const target = e.target
+      //   if (target.classList.contains('send-address') || target.classList.contains('send-amount')) return
+
+      //   reset(address, false)
+      //   reset(amount, false)
+      // })
 
       send_amount.addEventListener('click', (e) => {
         e.preventDefault()
@@ -53,9 +67,6 @@ export default function Account () {
         }
 
         if (cur_value === 'bets') {
-          console.log(to)
-          console.log(amount)
-          console.log(cur_value)
           Lib.send(to, amount, cur_value)
         }
       })
