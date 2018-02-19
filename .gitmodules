@@ -1,0 +1,6 @@
+[submodule "games"]
+	path = games
+	url = git@github.com:DaoCasino/FindTheEthereum.git
+[submodule "game/FindTheEthereum"]
+	path = game/FindTheEthereum
+	url = git@github.com:DaoCasino/FindTheEthereum.git
