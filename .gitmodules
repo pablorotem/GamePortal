@@ -2,3 +2,9 @@
 	path = packages/dclib
 	url = git@github.com:DaoCasino/DCLib.git
 
+[submodule "games/dice_game"]
+	path = games/dice_game
+	url = git@github.com:DaoCasino/DiceGame.git
+[submodule "games/FindTheEthereum"]
+	path = games/FindTheEthereum
+	url = git@github.com:DaoCasino/FindTheEthereum.git
