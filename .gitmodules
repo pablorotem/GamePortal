@@ -13,3 +13,6 @@
 [submodule "src/packages/dclib"]
 	path = src/packages/dclib
 	url = git@github.com:DaoCasino/DCLib.git
+[submodule "public/games/new_dicegame"]
+	path = public/games/new_dicegame
+	url = git@github.com:DaoCasino/DiceGame.git
