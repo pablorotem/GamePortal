@@ -61,11 +61,11 @@ export default function popup () {
       signBut.addEventListener('click', e => {
         e.preventDefault()
         popupAccount.style.display = 'block'
-        // popupActive({
-        //   flag    : true,
-        //   text    : false,
-        //   account : false
-        // })
+        popupActive({
+          flag    : true,
+          text    : false,
+          account : false
+        })
 
         setTimeout(() => {
           Lib.DCLib.Account.initAccount()

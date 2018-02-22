@@ -32,6 +32,12 @@ export default class GameWindow {
         e.preventDefault()
 
         const check_href = this.game_link[i].children[0].getAttribute('href')
+        const new_window = this.game_link[i].children[0].getAttribute('data-window')
+
+        if (new_window === 'new') {
+          window.location.href = check_href
+          return
+        }
 
         if (check_href === '#') {
           popup().getActive({
